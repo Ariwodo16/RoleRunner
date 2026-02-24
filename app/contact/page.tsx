@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Button from '@/components/Button';
+import CalendlyInline from "@/components/CalendlyInline";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -192,12 +193,7 @@ export default function ContactPage() {
                 <p className="mb-6 text-white/90">
                   Not sure if RoleRunner is right for you? Book a quick call to discuss your job search goals and see if we're a good match.
                 </p>
-                <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-4 text-center">
-                  <p className="text-sm mb-2">Calendar integration placeholder</p>
-                  <p className="text-xs text-white/70">
-                    (In production, this would embed Calendly or similar)
-                  </p>
-                </div>
+                <CalendlyInline />
               </div>
             </div>
           </div>
