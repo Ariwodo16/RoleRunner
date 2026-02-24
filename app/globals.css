@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-sand-50 via-white to-sunset-50 text-gray-900 font-body;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-sunset-600 via-sunset-500 to-sand-600;
+  }
+  
+  .text-gradient-blue {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-600 to-sky-400;
+  }
+  
+  .desert-glow {
+    box-shadow: 0 0 60px rgba(251, 154, 58, 0.15);
+  }
+  
+  .speed-lines {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .speed-lines::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 200px;
+    height: 2px;
+    background: linear-gradient(to left, rgba(251, 154, 58, 0.6), transparent);
+    animation: speedLine 1.5s ease-out infinite;
+  }
+  
+  .dust-trail {
+    position: relative;
+  }
+  
+  .dust-trail::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, rgba(236, 200, 157, 0.4), transparent);
+    border-radius: 50%;
+    animation: dustTrail 2s ease-out infinite;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #faf0e4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #fb9a3a, #d89450);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #f97316, #c97d3e);
+}
+
+/* Selection */
+::selection {
+  background: rgba(251, 154, 58, 0.3);
+  color: inherit;
+}
