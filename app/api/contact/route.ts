@@ -15,7 +15,7 @@ export async function POST(request: Request) {
 
     // 1. Send email notification
     const emailResult = await sendEmail({
-      to: process.env.NOTIFICATION_EMAIL || 'hello@rolerunner.com',
+      to: process.env.NOTIFICATION_EMAIL || 'rolerunner@gmail.com',
       subject: `💬 Contact Form: ${data.subject}`,
       html: formatContactEmail(data),
     });

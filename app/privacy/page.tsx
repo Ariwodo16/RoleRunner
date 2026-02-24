@@ -86,8 +86,8 @@ export default function PrivacyPage() {
               <h2 className="font-display font-bold text-2xl mb-4">Contact Us</h2>
               <p className="text-gray-700 leading-relaxed">
                 If you have questions about this Privacy Policy or wish to exercise your rights, please contact us at{' '}
-                <a href="mailto:privacy@rolerunner.com" className="text-sunset-600 hover:text-sunset-700 font-medium">
-                  privacy@rolerunner.com
+                <a href="mailto:rolerunner@gmail.com" className="text-sunset-600 hover:text-sunset-700 font-medium">
+                  rolerunner@gmail.com
                 </a>
               </p>
             </div>

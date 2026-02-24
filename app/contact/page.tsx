@@ -152,7 +152,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div className="font-bold text-gray-900 mb-1">Email</div>
-                      <a href="mailto:hello@rolerunner.com" className="text-sunset-600 hover:text-sunset-700">
+                      <a href="mailto:rolerunner@gmail.com" className="text-sunset-600 hover:text-sunset-700">
                         rolerunner@gmail.com
                       </a>
                     </div>

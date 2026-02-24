@@ -14,7 +14,7 @@ export async function POST(request: Request) {
 
     // 1. Send email notification to your Gmail
     const emailResult = await sendEmail({
-      to: process.env.NOTIFICATION_EMAIL || 'hello@rolerunner.com', // Change this to your Gmail
+      to: process.env.NOTIFICATION_EMAIL || 'rolerunner@gmail.com', // Change this to your Gmail
       subject: `🏃‍♂️ New Pilot Application - ${data.name}`,
       html: formatApplicationEmail(data),
     });

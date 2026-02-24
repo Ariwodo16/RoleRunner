@@ -106,8 +106,8 @@ export default function TermsPage() {
               <h2 className="font-display font-bold text-2xl mb-4">Contact</h2>
               <p className="text-gray-700 leading-relaxed">
                 Questions about these terms? Contact us at{' '}
-                <a href="mailto:legal@rolerunner.com" className="text-sunset-600 hover:text-sunset-700 font-medium">
-                  legal@rolerunner.com
+                <a href="mailto:rolerunner@gmail.com" className="text-sunset-600 hover:text-sunset-700 font-medium">
+                  rolerunner@gmail.com
                 </a>
               </p>
             </div>
