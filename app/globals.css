@@ -2,105 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
-/* -------------------------------- */
-/* Global Variables */
-/* -------------------------------- */
-
 :root {
   --font-display: var(--font-display);
   --font-body: var(--font-body);
-
-  /* Primary color system */
-  --color-primary: #38bdf8;   /* sky blue */
-  --color-accent: #0ea5e9;    /* complementary blue */
-  --color-soft: #e0f2fe;      /* soft background */
 }
 
-/* -------------------------------- */
-/* Base Styles */
-/* -------------------------------- */
-
 @layer base {
-
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-gradient-to-br from-sky-50 via-white to-blue-50 text-gray-900;
+    @apply bg-gradient-to-br from-sky-50 via-white to-charcoal-100 text-charcoal-900;
     font-family: var(--font-body);
   }
 
   h1,
   h2,
   h3,
-  h4 {
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-display);
   }
-
 }
 
-/* -------------------------------- */
-/* Custom Utilities */
-/* -------------------------------- */
-
 @layer utilities {
-
-  /* Gradient text */
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-600 via-sky-500 to-blue-400;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-600 via-sky-500 to-charcoal-700;
   }
 
-  /* Accent gradient */
-  .text-gradient-accent {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-sky-400;
+  .text-gradient-blue {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-600 to-sky-400;
   }
 
-  /* Glow effect */
-  .sky-glow {
-    box-shadow: 0 0 60px rgba(56,189,248,0.25);
+  .charcoal-glow {
+    box-shadow: 0 0 60px rgba(56, 189, 248, 0.18);
   }
 
-  /* Motion speed line effect */
+  .desert-glow {
+    box-shadow: 0 0 60px rgba(56, 189, 248, 0.18);
+  }
+
+  .orange-glow {
+    box-shadow: 0 0 60px rgba(56, 189, 248, 0.18);
+  }
+
+  .bg-gradient-orange {
+    @apply bg-gradient-to-r from-sky-500 via-sky-400 to-charcoal-700;
+  }
+
   .speed-lines {
     position: relative;
     overflow: hidden;
   }
 
   .speed-lines::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 0;
     width: 200px;
     height: 2px;
-    background: linear-gradient(to left, rgba(56,189,248,0.7), transparent);
+    background: linear-gradient(to left, rgba(56, 189, 248, 0.6), transparent);
     animation: speedLine 1.5s ease-out infinite;
   }
 
-  /* Dust motion trail */
   .dust-trail {
     position: relative;
   }
 
   .dust-trail::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 30px;
     height: 30px;
-    background: radial-gradient(circle, rgba(56,189,248,0.35), transparent);
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.25), transparent);
     border-radius: 50%;
     animation: dustTrail 2s ease-out infinite;
   }
-
 }
 
-/* -------------------------------- */
-/* Animations */
-/* -------------------------------- */
-
 @keyframes speedLine {
-
   0% {
     transform: translateX(-200px);
     opacity: 0;
@@ -114,11 +97,9 @@
     transform: translateX(100vw);
     opacity: 0;
   }
-
 }
 
 @keyframes dustTrail {
-
   0% {
     transform: scale(0.2);
     opacity: 0.6;
@@ -133,35 +114,28 @@
     transform: scale(1.4);
     opacity: 0;
   }
-
 }
 
-/* -------------------------------- */
-/* Scrollbar Styling */
-/* -------------------------------- */
-
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f0f9ff;
+  background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #38bdf8, #0ea5e9);
-  border-radius: 6px;
+  background: linear-gradient(to bottom, #38bdf8, #334155);
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #0284c7, #0369a1);
+  background: linear-gradient(to bottom, #0ea5e9, #1e293b);
 }
 
-/* -------------------------------- */
-/* Text Selection */
-/* -------------------------------- */
-
+/* Selection */
 ::selection {
-  background: rgba(56,189,248,0.35);
+  background: rgba(56, 189, 248, 0.3);
   color: inherit;
 }
